@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4 Function Calculator</title>
+        <style>
+            body {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+                font-family: courier;
+                color: black;
+            }
+            form { 
+                margin: 0 auto; 
+                width: 250px;
+                border: 3px solid black;
+                padding: 20px;
+                background-color: #E3C565;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+        <script>
+            function add(){
+                var num1, num2;
+                num1 = Number(document.form1.txtNum1.value);
+                num2 = Number(document.form1.txtNum2.value);
+                document.form1.result.value = num1 + num2;
+            }
+            function subtract(){
+                var num1, num2;
+                num1 = Number(document.form1.txtNum1.value);
+                num2 = Number(document.form1.txtNum2.value);
+                document.form1.result.value = num1 - num2;
+            }
+            function divide(){
+                var num1, num2;
+                num1 = Number(document.form1.txtNum1.value);
+                num2 = Number(document.form1.txtNum2.value);
+                document.form1.result.value = num1 / num2;
+            }
+            function multiply(){
+                var num1, num2;
+                num1 = Number(document.form1.txtNum1.value);
+                num2 = Number(document.form1.txtNum2.value);
+                document.form1.result.value = num1 * num2;
+            }
+        </script> 
+    </head>
+    <h1>4-Function Calculator</h1><br>
+    <body>
+        <form id="form1" name="form1">
+        Enter operand 1:
+        <input type="text" name="txtNum1" size=8><br><br>
+        Enter operand 2:
+        <input type="text" name="txtNum2" size=8><br><br>
+        <input type="button" value="+" onclick="add()">
+        <input type="button" value="-" onclick="subtract()">
+        <input type="button" value="/" onclick="divide()">
+        <input type="button" value="x" onclick="multiply()"><br><br>
+        Result:
+        <input type="text" name="result"><br><br>
+        </form>
+    </body>
+</html>
